@@ -54,7 +54,7 @@ export default function ChatWidget({ variant = "widget", onClose }: ChatWidgetPr
     >
       <div className="relative flex items-center gap-3 bg-gradient-to-br from-violet-700 to-blue-900 p-4 text-white">
         <div className="h-10 w-10 overflow-hidden rounded-full bg-white/10">
-          <Image src="/assets/bot-avatar.jpg" alt="VocaBot" width={40} height={40} className="h-full w-full object-cover" />
+          <Image src="/assets/vocabot-logo.png" alt="VocaBot" width={40} height={40} className="h-full w-full object-cover" />
         </div>
         <div className="flex flex-col">
           <strong className="text-base leading-tight">VocaBot</strong>
