@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 160" width="280" height="160">
+  <rect width="280" height="160" rx="12" fill="#f4f5f9"/>
+  <path d="M20 30 L100 20 L180 35 L260 25 L260 130 L180 140 L100 130 L20 140 Z" fill="#c4b5fd" opacity="0.5"/>
+  <g fill="#6B21A8">
+    <circle cx="70" cy="60" r="6"/>
+    <circle cx="140" cy="45" r="6"/>
+    <circle cx="200" cy="70" r="6"/>
+    <circle cx="110" cy="100" r="6"/>
+    <circle cx="180" cy="110" r="6"/>
+    <circle cx="60" cy="115" r="6"/>
+  </g>
+  <g fill="#1e1b4b" font-family="Segoe UI, sans-serif" font-size="9">
+    <text x="78" y="58">UNC</text>
+    <text x="148" y="43">UNRC</text>
+    <text x="208" y="68">UNVM</text>
+    <text x="118" y="98">IUA</text>
+    <text x="188" y="108">UTN</text>
+    <text x="20" y="113">UPC</text>
+  </g>
+  <text x="140" y="150" text-anchor="middle" fill="#1e1b4b" font-family="Segoe UI, sans-serif" font-size="12" font-weight="600">Universidades públicas — Córdoba</text>
+</svg>
