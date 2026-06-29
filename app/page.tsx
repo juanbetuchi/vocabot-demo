@@ -46,10 +46,7 @@ export default function Home() {
             Construí tu proyecto de vida
           </h1>
           <p className="mx-auto max-w-xl text-sm text-slate-600 sm:text-base">
-            ¡Hola! Soy VocaBot 🤖 Un chatbot de orientación creado por estudiantes de 5° Año del
-            Instituto San José para acompañarte a pensar tu futuro académico, laboral y personal.
-            No tomo decisiones por vos, te ayudo a explorar opciones, conocer posibilidades y
-            construir tu propio camino.
+            ¡Hola! Soy VocaBot 🤖 Te ayudo a pensar tu futuro académico, laboral y personal.
           </p>
         </section>
 
