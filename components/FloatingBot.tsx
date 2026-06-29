@@ -23,6 +23,7 @@ export default function FloatingBot({ variant = "fixed" }: FloatingBotProps) {
   function handleOpen() {
     setOpen(true);
     setShowTooltip(false);
+    new Audio("/assets/saludo.mp3").play().catch(() => {});
   }
 
   if (variant === "fixed" && (pathname?.startsWith("/chat") || pathname === "/")) return null;
