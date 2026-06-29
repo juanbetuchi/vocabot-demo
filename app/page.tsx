@@ -41,14 +41,14 @@ export default function Home() {
         </nav>
       </header>
 
-      <div className="relative w-full">
+      <div className="relative aspect-[4/3] w-full sm:aspect-[16/7] lg:aspect-[2000/707]">
         <Image
           src="/assets/header-quien-elige.jpg"
           alt="¿Quién elige? Juventudes, inteligencia artificial y decisiones vocacionales en la era digital en Laboulaye"
-          width={2000}
-          height={707}
+          fill
           priority
-          className="h-auto w-full object-cover"
+          sizes="100vw"
+          className="object-cover object-center"
         />
       </div>
 
