@@ -120,7 +120,7 @@ export const CHAT_TREE: Record<string, ChatNode> = {
   },
   co_por_que: {
     message:
-      "Elegir no es algo que ocurre de una vez y para siempre, porque denota movimiento constante. Desde niños/as vamos construyendo nuestra historia y esta nos va marcando.\n\nEl conocimiento de uno mismo tiene gran valor para hacer una buena elección. Es importante detenerse en: las experiencias de vida, la conciencia de la realidad y el reconocimiento de los recursos internos.\n\nConocerse implica aprender a mirarse. Así, tu elección será un verdadero ejercicio de libertad.",
+      "Seguramente, te gustaría tomar una decisión rápida que no demande demasiado tiempo para pensar e investigar y que no te enfrente a dudas o a instancias de pura incertidumbre. Sería más fácil dejarse llevar por la fantasía de un test que resolviera tu vida diciéndote lo que tenés que hacer y las razones por las que debés seguir esa opción. Afortunadamente no hay nada ni nadie que pueda resolver esto por vos. Aquí está el verdadero desafío: abandonar la comodidad en el que otros toman decisiones por vos para pasar a una posición más adulta en donde seas quien resuelva las situaciones que se te presentan. Para ello necesitarás de tiempo para reflexionar sobre quién sos y qué querés hacer con tu vida.\n\nElegir no es algo que ocurre de una vez y para siempre porque denota constante movimiento. Tampoco es algo que comienza en el último año del secundario ya que desde niños/as vamos construyendo nuestra historia y esta, a su vez, nos va marcando. Es así como la vocación nos presenta fases, continuidad, dinamismo y transformación.\n\nEl conocimiento de uno mismo tiene gran valor para hacer una buena elección. Aunque este saber es a veces limitado hay algunos aspectos sobre lo que es importante detenerse: las experiencias de vida, la conciencia de la realidad y el reconocimiento de los recursos internos.\n\nAsumir una actitud protagónica en la construcción de un proyecto de vida supone la gran tarea de identificar cuáles son tus valores, pasiones, habilidades, deseos e intereses antes de enfrentarte a una elección importante. Se trata de observarte, entenderte y reconocerte a vos mismo.\n\nConocerse implica aprender a mirarse. De este modo tu elección será un verdadero ejercicio de libertad.",
     crumb: ["Inicio", "Conocerse", "¿Por qué?"],
     options: [
       { label: "⬅ Volver", goto: "conocerse" },
@@ -129,8 +129,12 @@ export const CHAT_TREE: Record<string, ChatNode> = {
   },
   co_herramienta: {
     message:
-      "¿Estás pensando qué hacer después de la secundaria?\n\n'Proyectar-te' es una plataforma del Ministerio de Educación de Córdoba con actividades, recursos y herramientas para que descubras tus intereses, conozcas tus fortalezas y explores distintas opciones de estudio y trabajo.\n\nRecordá: para elegir, primero hay que conocerse y luego informarse. ¡Animate a explorar Proyectar-te!",
+      "¿Estás pensando qué hacer después de la secundaria? Proyectar-te puede ayudarte.\n\nEs una plataforma del Ministerio de Educación de Córdoba con actividades, recursos y herramientas para que descubras tus intereses, conozcas tus fortalezas y explores distintas opciones de estudio y trabajo.\n\nRecordá: para elegir, primero hay que conocerse y luego informarse.\n\n¡Animate a explorar Proyectar-te y empezá a diseñar tu futuro!",
     crumb: ["Inicio", "Conocerse", "Proyectar-te"],
+    link: {
+      url: "https://proyectarte.cba.gov.ar/",
+      label: "🧭 Ir a Proyectar-te",
+    },
     options: [
       { label: "⬅ Volver", goto: "conocerse" },
       { label: "🏠 Menú principal", goto: "start" },
