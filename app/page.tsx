@@ -54,15 +54,16 @@ export default function Home() {
           <FloatingBot variant="inline" />
         </section>
 
-        <section className="rounded-3xl bg-gradient-to-br from-indigo-950 via-violet-900 to-blue-900 px-6 py-14 sm:px-12">
-          <div className="group flex flex-col items-center justify-center sm:flex-row">
+        <section className="overflow-x-auto rounded-3xl bg-gradient-to-br from-indigo-950 via-violet-900 to-blue-900 px-6 py-20">
+          <div className="group flex min-w-max items-center justify-center">
             {cards.map((c, i) => {
-              const baseRotate = ["-rotate-6", "rotate-0", "rotate-6"][i];
-              const baseMargin = i === 1 ? "sm:-mx-2" : "sm:-mx-11";
+              const baseRotate = ["-rotate-[22deg]", "rotate-0", "rotate-[22deg]"][i];
+              const baseMargin = i === 1 ? "-mx-4" : "-mx-16";
+              const baseZ = i === 1 ? "z-10" : "z-0";
               return (
                 <div
                   key={c.title}
-                  className={`relative mb-6 flex h-72 w-56 flex-col items-center justify-center rounded-xl border border-white/10 bg-gradient-to-b from-white/15 to-white/0 p-6 text-center shadow-[0_25px_25px_rgba(0,0,0,0.25)] backdrop-blur-md transition-all duration-500 hover:z-10 hover:!mx-2 hover:!rotate-0 hover:!scale-105 hover:bg-white/15 sm:mb-0 ${baseRotate} ${baseMargin} group-hover:mx-2 group-hover:rotate-0`}
+                  className={`relative flex h-64 w-44 shrink-0 flex-col items-center justify-center rounded-2xl border border-white/15 bg-gradient-to-b from-white/20 to-white/0 p-5 text-center shadow-[0_25px_50px_rgba(0,0,0,0.5)] backdrop-blur-xl transition-all duration-500 ease-out hover:!z-20 hover:!mx-3 hover:!rotate-0 hover:!scale-125 hover:bg-white/20 hover:shadow-[0_30px_60px_rgba(124,58,237,0.5)] sm:h-72 sm:w-56 ${baseRotate} ${baseMargin} ${baseZ} group-hover:mx-3 group-hover:rotate-0 group-hover:scale-105`}
                 >
                   <div
                     className={`mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br ${c.accent} text-2xl shadow-lg`}
