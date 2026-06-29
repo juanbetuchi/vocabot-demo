@@ -45,8 +45,10 @@ export default function Home() {
             Construí tu proyecto de vida
           </h1>
           <p className="mx-auto max-w-xl text-sm text-slate-600 sm:text-base">
-            El Instituto San José acompaña a sus estudiantes de 5° Año en el camino hacia la
-            educación superior y el mundo laboral.
+            ¡Hola! Soy VocaBot 🤖 Un chatbot de orientación creado por estudiantes de 5° Año del
+            Instituto San José para acompañarte a pensar tu futuro académico, laboral y personal.
+            No tomo decisiones por vos, te ayudo a explorar opciones, conocer posibilidades y
+            construir tu propio camino.
           </p>
         </section>
 
