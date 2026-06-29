@@ -14,6 +14,7 @@ export type ChatNode = {
   imageWidth?: number;
   imageHeight?: number;
   imageCaption?: string;
+  link?: { url: string; label: string };
 };
 
 export const CRUMB_ICONS: Record<string, string> = {
@@ -77,7 +78,7 @@ export const CHAT_TREE: Record<string, ChatNode> = {
   },
   sv_objetivos: {
     message:
-      "VocaBot fue creado para acompañar a los estudiantes del último año de la escuela secundaria en la construcción de su proyecto de vida.\n\nSus principales objetivos son:\n• Brindar información clara y accesible sobre carreras, profesiones y oficios.\n• Acercar oportunidades educativas, laborales y de formación.\n• Favorecer la reflexión sobre intereses, habilidades y expectativas personales.\n• Orientar la búsqueda de información confiable para la toma de decisiones.\n• Promover el uso responsable y crítico de la inteligencia artificial.\n\nVocaBot no toma decisiones por vos, te ayuda a explorar opciones, conocer posibilidades y construir tu propio camino.",
+      "VocaBot fue creado para acompañar a los estudiantes del último año de la escuela secundaria en la construcción de su proyecto de vida.\n\nSus principales objetivos son:\n• Brindar información clara y accesible sobre carreras, profesiones y oficios.\n• Acercar oportunidades educativas, laborales y de formación.\n• Favorecer la reflexión sobre intereses, habilidades y expectativas personales.\n• Orientar la búsqueda de información confiable para la toma de decisiones.\n• Promover el uso responsable y crítico de la inteligencia artificial como herramienta de aprendizaje y orientación.\n\nVocaBot no toma decisiones por vos, te ayuda a explorar opciones, conocer posibilidades y construir tu propio camino.",
     crumb: ["Inicio", "Sobre VocaBot", "Objetivos"],
     options: [
       { label: "⬅ Volver", goto: "sobre_vocabot" },
@@ -86,7 +87,7 @@ export const CHAT_TREE: Record<string, ChatNode> = {
   },
   sv_como_se_usa: {
     message:
-      "VocaBot funciona mediante un sistema de menús guiados.\n\nSolo tenés que seleccionar la opción que más se relacione con lo que querés consultar:\n• Conocerme mejor\n• Informarme sobre la oferta académica de la ciudad y la provincia\n• Saber sobre oportunidades laborales\n• Obtener información sobre cómo decidirme\n• Saber más sobre nuestra investigación\n\nA medida que avances, VocaBot te ofrecerá información, recursos y nuevas opciones.",
+      "VocaBot funciona mediante un sistema de inteligencia artificial guiada.\n\nEsto significa que podrás recorrer distintos temas a través de botones y menús especialmente diseñados para ayudarte a encontrar información de manera simple y organizada.\n\nSolo tenés que seleccionar la opción que más se relacione con lo que querés consultar:\n• Conocerme mejor\n• Informarme sobre la oferta académica de la ciudad y la provincia.\n• Saber sobre oportunidades laborales.\n• Obtener información sobre cómo decidirme y qué tener en cuenta.\n• Saber más sobre nuestra investigación.\n\nA medida que avances, VocaBot te ofrecerá información, recursos y nuevas opciones para profundizar en aquello que te interese.",
     crumb: ["Inicio", "Sobre VocaBot", "Cómo se usa"],
     options: [
       { label: "⬅ Volver", goto: "sobre_vocabot" },
@@ -95,8 +96,12 @@ export const CHAT_TREE: Record<string, ChatNode> = {
   },
   sv_aporte: {
     message:
-      "VocaBot es un proyecto en construcción permanente. Tu opinión es muy importante para seguir mejorándolo.\n\n¿Qué te gustaría que incorporáramos? ¿Qué información te resultó útil? ¿Qué función te gustaría encontrar en futuras versiones?\n\n(Acá iría el link al formulario de Google para sugerencias)",
+      "VocaBot es un proyecto en construcción permanente.\nTu opinión es muy importante para seguir mejorándolo.\n\n¿Qué te gustaría que incorporáramos?\n¿Qué información te resultó útil?\n¿Qué función te gustaría encontrar en futuras versiones?\n\nDejanos tus comentarios, sugerencias o ideas para ayudarnos a construir una herramienta cada vez más útil para los estudiantes.\n\nTe invitamos a responder un breve formulario:\n• ¿Qué fue lo que más te gustó de VocaBot?\n• ¿Qué información te gustaría que agreguemos?\n• ¿Tenés alguna sugerencia para mejorar la experiencia?",
     crumb: ["Inicio", "Sobre VocaBot", "Tu aporte"],
+    link: {
+      url: "https://docs.google.com/forms/d/e/1FAIpQLScUGKCzpq8q5kfQ5CU1KhIX-TOZ5wPp1suScma_3e5r6pz_bQ/viewform",
+      label: "📝 Dejar mi sugerencia",
+    },
     options: [
       { label: "⬅ Volver", goto: "sobre_vocabot" },
       { label: "🏠 Menú principal", goto: "start" },

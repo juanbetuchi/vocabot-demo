@@ -157,6 +157,16 @@ function BotBubble({ nodeId }: { nodeId: string }) {
       {node.imageCaption && (
         <span className="mt-1 block text-[11px] italic text-slate-500">{node.imageCaption}</span>
       )}
+      {node.link && (
+        <a
+          href={node.link.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mt-2.5 block rounded-full bg-violet-700 px-3.5 py-2 text-center text-[13px] font-semibold text-white transition hover:bg-violet-800"
+        >
+          {node.link.label}
+        </a>
+      )}
     </div>
   );
 }
