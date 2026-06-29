@@ -1,3 +1,4 @@
+import Image from "next/image";
 import WelcomeVideoModal from "@/components/WelcomeVideoModal";
 import FloatingBot from "@/components/FloatingBot";
 import InfoCards from "@/components/InfoCards";
@@ -61,7 +62,14 @@ export default function Home() {
         </section>
       </main>
 
-      <footer className="border-t border-slate-200 bg-white px-6 py-5 text-center text-xs text-slate-500">
+      <footer className="flex flex-col items-center gap-3 border-t border-slate-200 bg-white px-6 py-7 text-center text-xs text-slate-500">
+        <Image
+          src="/assets/images-removebg-preview.png"
+          alt="Instituto Superior de Formación Docente San José Laboulaye"
+          width={444}
+          height={450}
+          className="h-auto w-16"
+        />
         VocaBot · Proyecto de orientación vocacional — 5° Año, Instituto San José, Laboulaye · 2026
       </footer>
     </div>
