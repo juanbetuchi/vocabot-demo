@@ -37,15 +37,13 @@ export default function InfoCards({ cards }: { cards: InfoCard[] }) {
                     {c.icon}
                   </div>
                   <h3 className="text-lg font-bold text-white">{c.title}</h3>
-                  <span className="mt-2 text-xs font-medium text-white/80">
-                    {c.tagline || "Tocá para ver más"}
-                  </span>
+                  <span className="mt-2 text-[11px] font-medium text-white/70">Tocá para ver más</span>
                 </div>
                 <div
                   className="absolute inset-0 flex flex-col items-center justify-center rounded-2xl bg-indigo-950 p-5 text-center shadow-[0_8px_24px_rgba(30,27,75,0.25)] [backface-visibility:hidden]"
                   style={{ transform: "rotateY(180deg)" }}
                 >
-                  <div className="mb-2 flex h-14 w-14 items-center justify-center rounded-full bg-white p-1.5 shadow-md">
+                  <div className="mb-3 flex h-14 w-14 items-center justify-center rounded-full bg-white p-1.5 shadow-md">
                     <Image
                       src="/assets/images-removebg-preview.png"
                       alt="Instituto San José"
@@ -54,8 +52,9 @@ export default function InfoCards({ cards }: { cards: InfoCard[] }) {
                       className="h-full w-full object-contain"
                     />
                   </div>
-                  <h3 className="mb-2 text-sm font-bold text-white">{c.title}</h3>
-                  <p className="text-xs leading-relaxed text-white/80">{c.text}</p>
+                  <p className="text-sm font-medium leading-relaxed text-white">
+                    {c.tagline || c.text}
+                  </p>
                 </div>
               </div>
             </div>
