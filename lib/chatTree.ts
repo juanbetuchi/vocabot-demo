@@ -44,7 +44,9 @@ export const CRUMB_ICONS: Record<string, string> = {
   "Universidades": "🏛️",
   "Futuro laboral": "💼",
   "Decidirse": "⚖️",
-  "¿Qué supone?": "🤔",
+  "Animarse a dar el siguiente paso": "🤔",
+  "Profesionales": "🎙️",
+  "Las profesionales dicen…": "💬",
   "Investigación": "🔬",
   "Problema": "❗",
   "Metodología": "📊",
@@ -255,16 +257,40 @@ export const CHAT_TREE: Record<string, ChatNode> = {
     message: "Seleccioná una opción.",
     crumb: ["Inicio", "Decidirse"],
     options: [
-      { label: "¿Qué supone?", goto: "de_que_supone" },
+      { label: "Animarse a dar el siguiente paso", goto: "de_que_supone" },
+      { label: "¿Qué dicen los profesionales?", goto: "de_profesionales" },
       { label: "⬅ Volver al menú principal", goto: "start" },
     ],
   },
   de_que_supone: {
     message:
-      "La vocación no concluye a partir de una elección, sino que continúa formándose día a día. Se trata de un proceso abierto a infinitas y nuevas posibilidades y no enmarcado en un final que tiene algo siempre imposible de asir.\n\nElegir implica renunciar a algo, en donde dicha renuncia no es total. Puede significar postergar intereses porque no es posible hacerlo todo a la vez. El asunto tiene que ver con construir un proyecto de vida en donde vas a seguir eligiendo y renunciando.\n\nTienes que tener presente que las decisiones que tomes no van a definir el resto de tu vida a modo de sentencia, sino que van a marcar el inicio de un camino que luego podrá transformarse, conectarse con otros, desviarse por algún tiempo o regresar al ya transitado desde otro lugar y con otras experiencias vividas.\n\nTendrás que asumir la responsabilidad de tus propios deseos eligiendo con compromiso, pero sabiendo que puedes equivocarte y cambiar el rumbo sin sentir que el futuro se arruina por ello.\n\nSi ya exploraste, investigaste lo suficiente y reflexionaste críticamente… llegó el momento de tomar coraje y asumir nuevos desafíos comprendiendo que 'No se juega la vida en una lección, aunque para elegir haya que jugarse' (Rascovan; 2010)",
-    crumb: ["Inicio", "Decidirse", "¿Qué supone?"],
+      "Tomar una decisión vocacional no significa definir para siempre tu futuro. Elegir es iniciar un camino que se irá construyendo con nuevas experiencias, aprendizajes y oportunidades.\n\nToda elección implica dejar otras opciones para más adelante, pero eso no significa renunciar a ellas para siempre. A lo largo de la vida podrás revisar tus decisiones, cambiar de rumbo, descubrir nuevos intereses o fortalecer los que ya tenés.\n\nLo importante es decidir con información, reflexión y compromiso, sabiendo que equivocarse también forma parte del aprendizaje. La vocación no se encuentra de una vez y para siempre: se construye día a día.",
+    crumb: ["Inicio", "Decidirse", "Animarse a dar el siguiente paso"],
     options: [
       { label: "⬅ Volver", goto: "decidirse" },
+      { label: "🏠 Menú principal", goto: "start" },
+    ],
+  },
+  de_profesionales: {
+    message: "¿Qué dicen los profesionales?\n\nConocé la palabra de profesionales de nuestra ciudad.",
+    crumb: ["Inicio", "Decidirse", "Profesionales"],
+    options: [
+      { label: "Las profesionales dicen…", goto: "de_profesionales_fotos" },
+      { label: "⬅ Volver", goto: "decidirse" },
+      { label: "🏠 Menú principal", goto: "start" },
+    ],
+  },
+  de_profesionales_fotos: {
+    message: "Estas son las palabras de profesionales de nuestra ciudad:",
+    crumb: ["Inicio", "Decidirse", "Profesionales", "Las profesionales dicen…"],
+    images: [
+      { src: "prof-mandrile.jpeg", width: 1024, height: 1536 },
+      { src: "prof-godio.jpeg", width: 1024, height: 1536 },
+      { src: "prof-vivaldo.jpeg", width: 1024, height: 1536 },
+      { src: "prof-munozsj.jpeg", width: 1024, height: 1536 },
+    ],
+    options: [
+      { label: "⬅ Volver", goto: "de_profesionales" },
       { label: "🏠 Menú principal", goto: "start" },
     ],
   },
