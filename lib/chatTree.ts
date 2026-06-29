@@ -69,7 +69,13 @@ export const CHAT_TREE: Record<string, ChatNode> = {
         imageWidth: 259,
         imageHeight: 113,
       },
-      { label: "3. Informarse", goto: "informarse" },
+      {
+        label: "3. Informarse",
+        goto: "informarse",
+        image: "btn-informarse.png",
+        imageWidth: 267,
+        imageHeight: 115,
+      },
       {
         label: "4. Decidirse",
         goto: "decidirse",
