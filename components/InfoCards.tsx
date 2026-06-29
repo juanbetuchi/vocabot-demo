@@ -6,6 +6,7 @@ import Image from "next/image";
 export type InfoCard = {
   icon: string;
   title: string;
+  tagline?: string;
   text: string;
   accent: string;
 };
@@ -36,7 +37,9 @@ export default function InfoCards({ cards }: { cards: InfoCard[] }) {
                     {c.icon}
                   </div>
                   <h3 className="text-lg font-bold text-white">{c.title}</h3>
-                  <span className="mt-2 text-[11px] font-medium text-white/70">Tocá para ver más</span>
+                  <span className="mt-2 text-xs font-medium text-white/80">
+                    {c.tagline || "Tocá para ver más"}
+                  </span>
                 </div>
                 <div
                   className="absolute inset-0 flex flex-col items-center justify-center rounded-2xl bg-indigo-950 p-5 text-center shadow-[0_8px_24px_rgba(30,27,75,0.25)] [backface-visibility:hidden]"

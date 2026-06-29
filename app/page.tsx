@@ -7,19 +7,22 @@ import HeroVideo from "@/components/HeroVideo";
 const cards = [
   {
     icon: "📚",
-    title: "Oferta académica",
+    title: "Conocerse",
+    tagline: "Empezá por descubrir quién sos y qué querés.",
     text: "Conocé las carreras e instituciones disponibles en Laboulaye y la provincia de Córdoba.",
     accent: "from-violet-600 to-fuchsia-500",
   },
   {
     icon: "🧭",
-    title: "Orientación vocacional",
+    title: "Informarse",
+    tagline: "Buscá información para ampliar tus posibilidades.",
     text: "Herramientas para reflexionar sobre tus intereses, habilidades y decisiones futuras.",
     accent: "from-blue-600 to-cyan-400",
   },
   {
     icon: "💼",
-    title: "Mundo del trabajo",
+    title: "Decidirse",
+    tagline: "Elegí tu camino sin miedo a seguir aprendiendo.",
     text: "Información sobre oportunidades laborales y primer empleo en la ciudad.",
     accent: "from-amber-500 to-orange-400",
   },
