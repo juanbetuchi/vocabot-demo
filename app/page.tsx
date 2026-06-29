@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import WelcomeVideoModal from "@/components/WelcomeVideoModal";
 
 const cards = [
   {
@@ -22,6 +23,7 @@ const cards = [
 export default function Home() {
   return (
     <div className="flex flex-1 flex-col bg-slate-50">
+      <WelcomeVideoModal />
       <header className="flex flex-wrap items-center justify-between gap-3 bg-gradient-to-br from-violet-700 to-blue-900 px-5 py-3.5 text-white sm:px-8">
         <div className="flex items-center gap-2 text-lg font-bold">
           <Image
