@@ -95,7 +95,7 @@ export const CHAT_TREE: Record<string, ChatNode> = {
 
   // 1. SOBRE VOCABOT
   sobre_vocabot: {
-    message: "Sección: SOBRE VOCABOT\n\n¿Qué querés saber?",
+    message: "Seleccioná una opción.",
     crumb: ["Inicio", "Sobre VocaBot"],
     options: [
       { label: "Creadores del chatbot", goto: "sv_creadores" },
@@ -152,7 +152,7 @@ export const CHAT_TREE: Record<string, ChatNode> = {
 
   // 2. CONOCERSE
   conocerse: {
-    message: "Sección: CONOCERSE",
+    message: "Seleccioná una opción.",
     crumb: ["Inicio", "Conocerse"],
     options: [
       { label: "¿Por qué conocerse?", goto: "co_por_que" },
@@ -185,7 +185,7 @@ export const CHAT_TREE: Record<string, ChatNode> = {
 
   // 3. INFORMARSE
   informarse: {
-    message: "Sección: INFORMARSE",
+    message: "Seleccioná una opción.",
     crumb: ["Inicio", "Informarse"],
     options: [
       { label: "Oferta académica de la ciudad", goto: "in_oferta" },
@@ -250,7 +250,7 @@ export const CHAT_TREE: Record<string, ChatNode> = {
 
   // 4. DECIDIRSE
   decidirse: {
-    message: "Sección: DECIDIRSE\n\n¿Qué querés saber?",
+    message: "Seleccioná una opción.",
     crumb: ["Inicio", "Decidirse"],
     options: [
       { label: "¿Qué supone?", goto: "de_que_supone" },
@@ -269,7 +269,7 @@ export const CHAT_TREE: Record<string, ChatNode> = {
 
   // 5. SOBRE NUESTRA INVESTIGACIÓN
   investigacion: {
-    message: "Sección: SOBRE NUESTRA INVESTIGACIÓN",
+    message: "Seleccioná una opción.",
     crumb: ["Inicio", "Investigación"],
     options: [
       { label: "Problema de investigación", goto: "iv_problema" },
