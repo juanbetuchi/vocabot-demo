@@ -24,6 +24,8 @@ export default function WelcomeVideoModal() {
           src="/assets/welcome-video.mp4"
           controls
           autoPlay
+          muted
+          onEnded={() => setOpen(false)}
           className="block max-h-[85vh] max-w-[90vw] w-auto h-auto rounded-xl shadow-2xl"
         />
       </div>
