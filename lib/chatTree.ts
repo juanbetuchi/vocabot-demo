@@ -167,10 +167,14 @@ export const CHAT_TREE: Record<string, ChatNode> = {
   },
   in_universidades: {
     message:
-      "Universidades públicas en Córdoba:\n\n• Universidad Nacional de Córdoba (UNC)\n• Universidad Nacional de Río Cuarto (UNRC)\n• Universidad Nacional de Villa María (UNVM)\n• Instituto Universitario Aeronáutico (IUA)\n• Universidad Tecnológica Nacional (UTN)\n• Universidad Provincial de Córdoba (UPC)",
+      "Universidades públicas en Córdoba:\n\n• Universidad Nacional de Córdoba (UNC) (Córdoba)\n• Universidad Nacional de Río Cuarto (UNRC) (Córdoba)\n• Universidad Nacional de Villa María (UNVM)\n• Instituto Universitario Aeronáutico (IUA) (Córdoba)\n• Universidad Tecnológica Nacional (UTN)\n• Universidad Provincial de Córdoba (UPC)",
     crumb: ["Inicio", "Informarse", "Universidades"],
     image: "img-mapa.svg",
     imageCaption: "Mapa de Córdoba con ubicación de las universidades",
+    link: {
+      url: "https://www.upc.edu.ar/",
+      label: "🏛️ Ir al sitio de la UPC",
+    },
     options: [
       { label: "⬅ Volver", goto: "informarse" },
       { label: "🏠 Menú principal", goto: "start" },
