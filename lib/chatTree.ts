@@ -11,6 +11,8 @@ export type ChatNode = {
   crumb: string[];
   options: ChatOption[];
   image?: string;
+  imageWidth?: number;
+  imageHeight?: number;
   imageCaption?: string;
 };
 
@@ -64,7 +66,9 @@ export const CHAT_TREE: Record<string, ChatNode> = {
     message:
       "VocaBot fue desarrollado durante el año 2026 por estudiantes de 5° Año del Instituto San José, en el marco de los espacios curriculares 'Formación para la Vida y el Trabajo' y 'Metodología de la Investigación en Ciencias Sociales', con el acompañamiento de sus docentes.\n\nEl chatbot busca convertirse en una herramienta de orientación para acompañar la construcción de decisiones sobre el futuro académico, laboral y personal.",
     crumb: ["Inicio", "Sobre VocaBot", "Creadores"],
-    image: "img-creadores.svg",
+    image: "img-creadores-real.png",
+    imageWidth: 1024,
+    imageHeight: 1536,
     imageCaption: "Foto grupal del curso — Vocabot, Creadores",
     options: [
       { label: "⬅ Volver", goto: "sobre_vocabot" },

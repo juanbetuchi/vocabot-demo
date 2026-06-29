@@ -149,9 +149,9 @@ function BotBubble({ nodeId }: { nodeId: string }) {
         <Image
           src={`/assets/${node.image}`}
           alt={node.imageCaption || ""}
-          width={280}
-          height={160}
-          className="mt-1.5 block w-full rounded-lg"
+          width={node.imageWidth || 280}
+          height={node.imageHeight || 160}
+          className="mt-1.5 block h-auto w-full rounded-lg"
         />
       )}
       {node.imageCaption && (
