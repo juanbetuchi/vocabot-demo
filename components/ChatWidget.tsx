@@ -250,6 +250,17 @@ function BotBubble({
           )}
         </div>
       ))}
+      {node.youtube && (
+        <div className="mx-auto mt-2.5 aspect-[9/16] w-full max-w-[220px] overflow-hidden rounded-lg shadow-md">
+          <iframe
+            src={`https://www.youtube.com/embed/${node.youtube}`}
+            title="Video"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+            className="h-full w-full"
+          />
+        </div>
+      )}
       {node.link && (
         <a
           href={node.link.url}
