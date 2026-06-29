@@ -1,6 +1,7 @@
 import Image from "next/image";
 import WelcomeVideoModal from "@/components/WelcomeVideoModal";
 import FloatingBot from "@/components/FloatingBot";
+import InfoCards from "@/components/InfoCards";
 
 const cards = [
   {
@@ -55,36 +56,7 @@ export default function Home() {
         </section>
 
         <section className="overflow-x-auto rounded-3xl bg-gradient-to-br from-indigo-950 via-violet-900 to-blue-900 px-6 py-14 sm:py-20">
-          <div className="group flex flex-col items-center justify-center gap-5 sm:min-w-max sm:flex-row sm:gap-0">
-            {cards.map((c, i) => {
-              const baseRotate = ["sm:-rotate-[22deg]", "sm:rotate-0", "sm:rotate-[22deg]"][i];
-              const baseMargin = i === 1 ? "sm:-mx-4" : "sm:-mx-16";
-              const baseZ = i === 1 ? "z-10" : "z-0";
-              const fromRot = ["-55deg", "0deg", "55deg"][i];
-              const fromX = ["-50px", "0px", "50px"][i];
-              return (
-                <div
-                  key={c.title}
-                  style={
-                    {
-                      "--from-rot": fromRot,
-                      "--from-x": fromX,
-                      animationDelay: `${i * 0.15}s`,
-                    } as React.CSSProperties
-                  }
-                  className={`relative flex h-60 w-48 shrink-0 flex-col items-center justify-center rounded-2xl border border-white/15 bg-gradient-to-b from-white/20 to-white/0 p-5 text-center shadow-[0_25px_50px_rgba(0,0,0,0.5)] backdrop-blur-xl transition-all duration-500 ease-out active:scale-110 active:bg-white/20 active:shadow-[0_30px_60px_rgba(124,58,237,0.5)] sm:h-72 sm:w-56 sm:hover:!z-20 sm:hover:!mx-3 sm:hover:!rotate-0 sm:hover:!scale-125 sm:hover:bg-white/20 sm:hover:shadow-[0_30px_60px_rgba(124,58,237,0.5)] animate-[cardFanFrom_0.9s_ease-out_forwards] sm:animate-none ${baseRotate} ${baseMargin} ${baseZ} sm:group-hover:mx-3 sm:group-hover:rotate-0 sm:group-hover:scale-105`}
-                >
-                  <div
-                    className={`mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br ${c.accent} text-2xl shadow-lg`}
-                  >
-                    {c.icon}
-                  </div>
-                  <h3 className="mb-2 text-base font-bold text-white">{c.title}</h3>
-                  <p className="text-xs leading-relaxed text-white/70">{c.text}</p>
-                </div>
-              );
-            })}
-          </div>
+          <InfoCards cards={cards} />
         </section>
       </main>
 
