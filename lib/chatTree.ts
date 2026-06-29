@@ -40,6 +40,7 @@ export const CRUMB_ICONS: Record<string, string> = {
   "Universidades": "🏛️",
   "Futuro laboral": "💼",
   "Decidirse": "⚖️",
+  "¿Qué supone?": "🤔",
   "Investigación": "🔬",
   "Problema": "❗",
   "Metodología": "📊",
@@ -216,10 +217,21 @@ export const CHAT_TREE: Record<string, ChatNode> = {
 
   // 4. DECIDIRSE
   decidirse: {
-    message:
-      "Sección: DECIDIRSE\n\n¿Qué supone decidir?\n\nLa vocación no concluye a partir de una elección, sino que continúa formándose día a día. Elegir implica renunciar a algo, pero esa renuncia no es total.\n\nLas decisiones que tomes no van a definir el resto de tu vida a modo de sentencia, sino que marcarán el inicio de un camino que luego podrá transformarse.\n\nSi ya exploraste, investigaste lo suficiente y reflexionaste críticamente... llegó el momento de tomar coraje y asumir nuevos desafíos.\n\n'No se juega la vida en una lección, aunque para elegir haya que jugarse' (Rascovan, 2010).",
+    message: "Sección: DECIDIRSE\n\n¿Qué querés saber?",
     crumb: ["Inicio", "Decidirse"],
-    options: [{ label: "⬅ Volver al menú principal", goto: "start" }],
+    options: [
+      { label: "¿Qué supone?", goto: "de_que_supone" },
+      { label: "⬅ Volver al menú principal", goto: "start" },
+    ],
+  },
+  de_que_supone: {
+    message:
+      "¿Qué supone decidir?\n\nLa vocación no concluye a partir de una elección, sino que continúa formándose día a día. Elegir implica renunciar a algo, pero esa renuncia no es total.\n\nLas decisiones que tomes no van a definir el resto de tu vida a modo de sentencia, sino que marcarán el inicio de un camino que luego podrá transformarse.\n\nSi ya exploraste, investigaste lo suficiente y reflexionaste críticamente... llegó el momento de tomar coraje y asumir nuevos desafíos.\n\n'No se juega la vida en una lección, aunque para elegir haya que jugarse' (Rascovan, 2010).",
+    crumb: ["Inicio", "Decidirse", "¿Qué supone?"],
+    options: [
+      { label: "⬅ Volver", goto: "decidirse" },
+      { label: "🏠 Menú principal", goto: "start" },
+    ],
   },
 
   // 5. SOBRE NUESTRA INVESTIGACIÓN
