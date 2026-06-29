@@ -52,7 +52,7 @@ export const CRUMB_ICONS: Record<string, string> = {
 export const CHAT_TREE: Record<string, ChatNode> = {
   start: {
     message:
-      "¡Hola! Soy VocaBot 👋\nUn chatbot de orientación basado en menús, creado por estudiantes del Instituto San José para ayudarte a pensar tu futuro académico, laboral y personal.\n\n¿Sobre qué te gustaría hablar?",
+      "¡Hola! Soy VocaBot 👋\nUn chatbot de orientación creado por estudiantes del Instituto San José para ayudarte a descubrir y planificar tu futuro académico, laboral y personal.\n\n¿Sobre qué te gustaría hablar?",
     crumb: ["Inicio"],
     options: [
       {
