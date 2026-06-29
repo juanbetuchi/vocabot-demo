@@ -197,6 +197,28 @@ function BotBubble({
       {node.imageCaption && (
         <span className="mt-1 block text-[11px] italic text-slate-500">{node.imageCaption}</span>
       )}
+      {node.images?.map((img, i) => (
+        <div key={i} className={i > 0 ? "mt-3" : "mt-1.5"}>
+          <Image
+            src={`/assets/${img.src}`}
+            alt={img.caption || ""}
+            width={img.width}
+            height={img.height}
+            onClick={() =>
+              onImageClick({
+                src: `/assets/${img.src}`,
+                width: img.width,
+                height: img.height,
+                alt: img.caption || "",
+              })
+            }
+            className="block h-auto w-full cursor-zoom-in rounded-lg transition hover:opacity-90"
+          />
+          {img.caption && (
+            <span className="mt-1 block text-[11px] italic text-slate-500">{img.caption}</span>
+          )}
+        </div>
+      ))}
       {node.link && (
         <a
           href={node.link.url}

@@ -6,6 +6,13 @@ export type ChatOption = {
   goto: string;
 };
 
+export type ChatImage = {
+  src: string;
+  width: number;
+  height: number;
+  caption?: string;
+};
+
 export type ChatNode = {
   message: string;
   crumb: string[];
@@ -14,6 +21,7 @@ export type ChatNode = {
   imageWidth?: number;
   imageHeight?: number;
   imageCaption?: string;
+  images?: ChatImage[];
   link?: { url: string; label: string };
 };
 
@@ -184,10 +192,22 @@ export const CHAT_TREE: Record<string, ChatNode> = {
   },
   in_laboral: {
     message:
-      "¿Te preguntás de qué trabaja la gente en Laboulaye o dónde buscar tu primer empleo?\n\nEsta sección reúne recursos sobre el mundo del trabajo local y consejos para armar tu primer CV.",
+      "¿Te preguntás de qué trabaja la gente en Laboulaye o dónde buscar tu primer empleo? Estos recursos pueden ayudarte a conocer mejor las oportunidades que ofrece la ciudad.\n\n(Tocá cada imagen para verla más grande)",
     crumb: ["Inicio", "Informarse", "Futuro laboral"],
-    image: "img-laboral.svg",
-    imageCaption: "Mundo del trabajo en Laboulaye · Primer empleo + CV",
+    images: [
+      {
+        src: "img-laboral-1.jpg",
+        width: 2000,
+        height: 1552,
+        caption: "¿Cómo es el mundo del trabajo en Laboulaye?",
+      },
+      {
+        src: "img-laboral-2.jpg",
+        width: 2000,
+        height: 1448,
+        caption: "Buscás tu primer empleo — Bolsa de Trabajo municipal",
+      },
+    ],
     options: [
       { label: "⬅ Volver", goto: "informarse" },
       { label: "🏠 Menú principal", goto: "start" },
