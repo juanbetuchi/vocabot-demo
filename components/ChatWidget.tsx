@@ -148,7 +148,7 @@ export default function ChatWidget({ variant = "widget", onClose }: ChatWidgetPr
                   alt={opt.label}
                   width={opt.imageWidth || 200}
                   height={opt.imageHeight || 80}
-                  className="block h-9 w-auto"
+                  className="block h-12 w-auto"
                 />
               </button>
             );
