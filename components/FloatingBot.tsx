@@ -5,22 +5,71 @@ import Image from "next/image";
 import { usePathname } from "next/navigation";
 import ChatWidget from "./ChatWidget";
 
-export default function FloatingBot() {
+type FloatingBotProps = {
+  variant?: "fixed" | "inline";
+};
+
+export default function FloatingBot({ variant = "fixed" }: FloatingBotProps) {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
   const [showTooltip, setShowTooltip] = useState(false);
 
   useEffect(() => {
+    if (variant !== "fixed") return;
     const t = setTimeout(() => setShowTooltip(true), 1200);
     return () => clearTimeout(t);
-  }, []);
+  }, [variant]);
 
   function handleOpen() {
     setOpen(true);
     setShowTooltip(false);
   }
 
-  if (pathname?.startsWith("/chat") || pathname === "/") return null;
+  if (variant === "fixed" && (pathname?.startsWith("/chat") || pathname === "/")) return null;
+
+  if (variant === "inline") {
+    return (
+      <>
+        <div className="flex flex-col items-center">
+          <div
+            onClick={handleOpen}
+            className="relative flex h-32 w-32 cursor-pointer items-center justify-center rounded-full shadow-[0_16px_40px_rgba(30,27,75,0.4)] transition-transform animate-[botFloat_2.6s_ease-in-out_infinite] hover:scale-110 active:scale-95 sm:h-36 sm:w-36"
+          >
+            <span className="absolute -inset-3 rounded-full border-2 border-violet-700 opacity-60 animate-[botPulse_2.2s_ease-out_infinite]" />
+            <Image
+              src="/assets/vocabot-logo.png"
+              alt="VocaBot"
+              width={144}
+              height={144}
+              className="h-full w-full rounded-full object-cover"
+              priority
+            />
+            <span className="absolute -right-1 -top-1 flex h-7 w-7 items-center justify-center rounded-full border-2 border-white bg-rose-600 text-sm font-bold text-white">
+              1
+            </span>
+          </div>
+          <p className="mt-5 text-center text-sm font-semibold text-indigo-950">
+            ¡Hola! Soy VocaBot 👋
+          </p>
+          <p className="text-center text-xs text-slate-500">Tocá para empezar a chatear</p>
+        </div>
+
+        {open && (
+          <div
+            onClick={() => setOpen(false)}
+            className="fixed inset-0 z-[1000] flex items-center justify-center bg-black/60 p-4"
+          >
+            <div
+              onClick={(e) => e.stopPropagation()}
+              className="h-[85vh] w-full max-w-md animate-[botWidgetPop_0.28s_ease-out] overflow-hidden rounded-2xl sm:h-[640px]"
+            >
+              <ChatWidget onClose={() => setOpen(false)} />
+            </div>
+          </div>
+        )}
+      </>
+    );
+  }
 
   return (
     <>

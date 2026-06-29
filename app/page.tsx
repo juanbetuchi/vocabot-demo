@@ -1,6 +1,6 @@
 import Image from "next/image";
 import WelcomeVideoModal from "@/components/WelcomeVideoModal";
-import ChatWidget from "@/components/ChatWidget";
+import FloatingBot from "@/components/FloatingBot";
 
 const cards = [
   {
@@ -50,8 +50,8 @@ export default function Home() {
           </p>
         </section>
 
-        <section className="mx-auto mb-16 h-[620px] w-full max-w-md overflow-hidden rounded-3xl shadow-[0_30px_80px_-20px_rgba(30,27,75,0.45)] ring-1 ring-violet-900/10 sm:h-[680px]">
-          <ChatWidget />
+        <section className="mb-16 flex justify-center">
+          <FloatingBot variant="inline" />
         </section>
 
         <section className="grid grid-cols-1 gap-6 sm:grid-cols-3">
