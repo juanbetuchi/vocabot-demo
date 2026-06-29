@@ -41,6 +41,17 @@ export default function Home() {
         </nav>
       </header>
 
+      <div className="relative w-full">
+        <Image
+          src="/assets/header-quien-elige.jpg"
+          alt="¿Quién elige? Juventudes, inteligencia artificial y decisiones vocacionales en la era digital en Laboulaye"
+          width={2000}
+          height={707}
+          priority
+          className="h-auto w-full object-cover"
+        />
+      </div>
+
       <main className="mx-auto w-full max-w-4xl flex-1 px-4 py-12 sm:px-6 sm:py-16">
         <section className="mb-12 text-center">
           <h1 className="mb-3 text-2xl font-bold text-indigo-950 sm:text-4xl">
