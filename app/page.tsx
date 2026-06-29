@@ -54,28 +54,27 @@ export default function Home() {
           <FloatingBot variant="inline" />
         </section>
 
-        <section className="grid grid-cols-1 gap-6 sm:grid-cols-3">
-          {cards.map((c) => (
-            <div
-              key={c.title}
-              className="group relative overflow-hidden rounded-2xl bg-white p-6 shadow-[0_8px_24px_rgba(30,27,75,0.08)] transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_24px_48px_-12px_rgba(30,27,75,0.25)]"
-            >
-              <span
-                className={`absolute inset-x-0 top-0 h-1 bg-gradient-to-r ${c.accent} transition-all duration-300 group-hover:h-full group-hover:opacity-10`}
-              />
-              <div
-                className={`relative mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br ${c.accent} text-2xl shadow-lg transition-transform duration-300 group-hover:scale-110 group-hover:rotate-6`}
-              >
-                {c.icon}
-              </div>
-              <h3 className="relative mb-2 text-lg font-bold text-indigo-950">{c.title}</h3>
-              <p className="relative text-sm leading-relaxed text-slate-600">{c.text}</p>
-              <div className="relative mt-4 flex items-center gap-1 text-sm font-semibold text-violet-700 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-                Conocer más
-                <span className="transition-transform duration-300 group-hover:translate-x-1">→</span>
-              </div>
-            </div>
-          ))}
+        <section className="rounded-3xl bg-gradient-to-br from-indigo-950 via-violet-900 to-blue-900 px-6 py-14 sm:px-12">
+          <div className="group flex flex-col items-center justify-center sm:flex-row">
+            {cards.map((c, i) => {
+              const baseRotate = ["-rotate-6", "rotate-0", "rotate-6"][i];
+              const baseMargin = i === 1 ? "sm:-mx-2" : "sm:-mx-11";
+              return (
+                <div
+                  key={c.title}
+                  className={`relative mb-6 flex h-72 w-56 flex-col items-center justify-center rounded-xl border border-white/10 bg-gradient-to-b from-white/15 to-white/0 p-6 text-center shadow-[0_25px_25px_rgba(0,0,0,0.25)] backdrop-blur-md transition-all duration-500 hover:z-10 hover:!mx-2 hover:!rotate-0 hover:!scale-105 hover:bg-white/15 sm:mb-0 ${baseRotate} ${baseMargin} group-hover:mx-2 group-hover:rotate-0`}
+                >
+                  <div
+                    className={`mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br ${c.accent} text-2xl shadow-lg`}
+                  >
+                    {c.icon}
+                  </div>
+                  <h3 className="mb-2 text-base font-bold text-white">{c.title}</h3>
+                  <p className="text-xs leading-relaxed text-white/70">{c.text}</p>
+                </div>
+              );
+            })}
+          </div>
         </section>
       </main>
 
