@@ -1,4 +1,3 @@
-import Image from "next/image";
 import WelcomeVideoModal from "@/components/WelcomeVideoModal";
 import FloatingBot from "@/components/FloatingBot";
 import InfoCards from "@/components/InfoCards";
@@ -30,13 +29,13 @@ export default function Home() {
       <WelcomeVideoModal />
 
       <div className="relative aspect-[4/3] w-full sm:aspect-[16/7] lg:aspect-[2000/707]">
-        <Image
-          src="/assets/header-quien-elige.jpg"
-          alt="¿Quién elige? Juventudes, inteligencia artificial y decisiones vocacionales en la era digital en Laboulaye"
-          fill
-          priority
-          sizes="100vw"
-          className="object-cover object-center"
+        <video
+          src="/assets/hero-video.mp4"
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute inset-0 h-full w-full object-cover object-center"
         />
       </div>
 
