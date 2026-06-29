@@ -20,7 +20,7 @@ export default function FloatingBot() {
     setShowTooltip(false);
   }
 
-  if (pathname?.startsWith("/chat")) return null;
+  if (pathname?.startsWith("/chat") || pathname === "/") return null;
 
   return (
     <>
