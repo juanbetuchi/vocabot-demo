@@ -220,7 +220,7 @@ export const CHAT_TREE: Record<string, ChatNode> = {
     imageHeight: 1536,
     imageCaption: "Universidades nacionales en Córdoba — UNC, UTN, IUA, UNRC, UPC y UNVM",
     link: {
-      url: "https://www.instagram.com/institutosanjoselaboulaye?igsh=MTc1cXN4bTZja3k3cg%3D%3D",
+      url: "https://www.instagram.com/institutosanjoselaboulaye",
       label: "📷 Instagram del Instituto San José",
     },
     options: [
