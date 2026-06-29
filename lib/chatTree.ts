@@ -154,10 +154,12 @@ export const CHAT_TREE: Record<string, ChatNode> = {
   },
   in_oferta: {
     message:
-      "Laboulaye se está constituyendo paulatinamente como uno de los polos educativos más importantes de la región.\n\nAquí podrás encontrar toda la información sobre carreras e instituciones disponibles en la ciudad.",
+      "Laboulaye se está constituyendo paulatinamente como uno de los polos educativos más importantes de la región.\n\nTe dejamos aquí toda la info sobre carreras e instituciones para que puedas conocer la oferta académica que te ofrece la ciudad.\n\n(Tocá la imagen para verla más grande)",
     crumb: ["Inicio", "Informarse", "Oferta académica"],
-    image: "img-oferta.svg",
-    imageCaption: "Oferta académica en Laboulaye",
+    image: "img-oferta-real.png",
+    imageWidth: 864,
+    imageHeight: 1821,
+    imageCaption: "Oferta académica — Nivel superior, universitario y no universitario en Laboulaye",
     options: [
       { label: "⬅ Volver", goto: "informarse" },
       { label: "🏠 Menú principal", goto: "start" },

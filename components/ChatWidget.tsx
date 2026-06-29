@@ -13,11 +13,14 @@ type ChatWidgetProps = {
   onClose?: () => void;
 };
 
+type LightboxImage = { src: string; width: number; height: number; alt: string };
+
 export default function ChatWidget({ variant = "widget", onClose }: ChatWidgetProps) {
   const [messages, setMessages] = useState<Message[]>([{ kind: "bot", nodeId: "start" }]);
   const [options, setOptions] = useState<ChatOption[]>(CHAT_TREE.start.options);
   const [crumb, setCrumb] = useState<string[]>(CHAT_TREE.start.crumb);
   const [typing, setTyping] = useState(false);
+  const [lightbox, setLightbox] = useState<LightboxImage | null>(null);
   const bodyRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -101,7 +104,7 @@ export default function ChatWidget({ variant = "widget", onClose }: ChatWidgetPr
               {m.label}
             </div>
           ) : (
-            <BotBubble key={i} nodeId={m.nodeId} />
+            <BotBubble key={i} nodeId={m.nodeId} onImageClick={setLightbox} />
           )
         )}
         {typing && (
@@ -135,11 +138,40 @@ export default function ChatWidget({ variant = "widget", onClose }: ChatWidgetPr
           );
         })}
       </div>
+
+      {lightbox && (
+        <div
+          onClick={() => setLightbox(null)}
+          className="fixed inset-0 z-[2000] flex items-center justify-center bg-black/85 p-4"
+        >
+          <button
+            onClick={() => setLightbox(null)}
+            className="absolute right-4 top-4 flex h-9 w-9 items-center justify-center rounded-full bg-white/15 text-lg text-white hover:bg-white/25"
+            aria-label="Cerrar"
+          >
+            ✕
+          </button>
+          <Image
+            src={lightbox.src}
+            alt={lightbox.alt}
+            width={lightbox.width}
+            height={lightbox.height}
+            className="max-h-[90vh] max-w-[92vw] rounded-lg object-contain"
+            onClick={(e) => e.stopPropagation()}
+          />
+        </div>
+      )}
     </div>
   );
 }
 
-function BotBubble({ nodeId }: { nodeId: string }) {
+function BotBubble({
+  nodeId,
+  onImageClick,
+}: {
+  nodeId: string;
+  onImageClick: (img: LightboxImage) => void;
+}) {
   const node = CHAT_TREE[nodeId];
   if (!node) return null;
   return (
@@ -151,7 +183,15 @@ function BotBubble({ nodeId }: { nodeId: string }) {
           alt={node.imageCaption || ""}
           width={node.imageWidth || 280}
           height={node.imageHeight || 160}
-          className="mt-1.5 block h-auto w-full rounded-lg"
+          onClick={() =>
+            onImageClick({
+              src: `/assets/${node.image}`,
+              width: node.imageWidth || 280,
+              height: node.imageHeight || 160,
+              alt: node.imageCaption || "",
+            })
+          }
+          className="mt-1.5 block h-auto w-full cursor-zoom-in rounded-lg transition hover:opacity-90"
         />
       )}
       {node.imageCaption && (
