@@ -94,30 +94,42 @@ export default function ChatWidget({ variant = "widget", onClose }: ChatWidgetPr
         </div>
       )}
 
-      <div ref={bodyRef} className="flex flex-1 flex-col gap-2.5 overflow-y-auto bg-slate-50 p-4">
-        {messages.map((m, i) =>
-          m.kind === "user" ? (
-            <div
-              key={i}
-              className="max-w-[85%] self-end rounded-2xl rounded-br-sm bg-violet-700 px-3.5 py-2.5 text-sm text-white"
-            >
-              {m.label}
+      <div ref={bodyRef} className="relative flex-1 overflow-y-auto bg-[#1b1740]">
+        <div
+          aria-hidden
+          className="pointer-events-none absolute inset-0 z-0 opacity-[0.07]"
+          style={{
+            backgroundImage: "url(/assets/logo-cole-blanco.png)",
+            backgroundRepeat: "no-repeat",
+            backgroundPosition: "center",
+            backgroundSize: "60%",
+          }}
+        />
+        <div className="relative z-10 flex flex-col gap-2.5 p-4">
+          {messages.map((m, i) =>
+            m.kind === "user" ? (
+              <div
+                key={i}
+                className="max-w-[85%] self-end rounded-2xl rounded-br-sm bg-violet-700 px-3.5 py-2.5 text-sm text-white"
+              >
+                {m.label}
+              </div>
+            ) : (
+              <BotBubble key={i} nodeId={m.nodeId} onImageClick={setLightbox} />
+            )
+          )}
+          {typing && (
+            <div className="flex items-center gap-1 self-start rounded-2xl rounded-bl-sm border border-slate-200 bg-white px-4 py-3">
+              {[0, 1, 2].map((d) => (
+                <span
+                  key={d}
+                  className="h-1.5 w-1.5 animate-bounce rounded-full bg-slate-300"
+                  style={{ animationDelay: `${d * 0.15}s` }}
+                />
+              ))}
             </div>
-          ) : (
-            <BotBubble key={i} nodeId={m.nodeId} onImageClick={setLightbox} />
-          )
-        )}
-        {typing && (
-          <div className="flex items-center gap-1 self-start rounded-2xl rounded-bl-sm border border-slate-200 bg-white px-4 py-3">
-            {[0, 1, 2].map((d) => (
-              <span
-                key={d}
-                className="h-1.5 w-1.5 animate-bounce rounded-full bg-slate-300"
-                style={{ animationDelay: `${d * 0.15}s` }}
-              />
-            ))}
-          </div>
-        )}
+          )}
+        </div>
       </div>
 
       <div className="flex flex-wrap gap-2 border-t border-slate-200 bg-white p-3">
