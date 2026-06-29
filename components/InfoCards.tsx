@@ -42,13 +42,15 @@ export default function InfoCards({ cards }: { cards: InfoCard[] }) {
                   className="absolute inset-0 flex flex-col items-center justify-center rounded-2xl bg-indigo-950 p-5 text-center shadow-[0_8px_24px_rgba(30,27,75,0.25)] [backface-visibility:hidden]"
                   style={{ transform: "rotateY(180deg)" }}
                 >
-                  <Image
-                    src="/assets/images-removebg-preview.png"
-                    alt="Instituto San José"
-                    width={444}
-                    height={450}
-                    className="mb-2 h-10 w-auto"
-                  />
+                  <div className="mb-2 flex h-14 w-14 items-center justify-center rounded-full bg-white p-1.5 shadow-md">
+                    <Image
+                      src="/assets/images-removebg-preview.png"
+                      alt="Instituto San José"
+                      width={444}
+                      height={450}
+                      className="h-full w-full object-contain"
+                    />
+                  </div>
                   <h3 className="mb-2 text-sm font-bold text-white">{c.title}</h3>
                   <p className="text-xs leading-relaxed text-white/80">{c.text}</p>
                 </div>
