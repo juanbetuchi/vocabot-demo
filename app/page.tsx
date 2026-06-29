@@ -46,7 +46,7 @@ export default function Home() {
             Construí tu proyecto de vida
           </h1>
           <p className="mx-auto max-w-xl text-sm text-slate-600 sm:text-base">
-            ¡Hola! Soy VocaBot 🤖 Te ayudo a pensar tu futuro académico, laboral y personal.
+            Soy VocaBot 🤖 Te ayudo a pensar tu futuro académico, laboral y personal.
           </p>
         </section>
 
