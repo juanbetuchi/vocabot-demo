@@ -2,6 +2,7 @@ import Image from "next/image";
 import WelcomeVideoModal from "@/components/WelcomeVideoModal";
 import FloatingBot from "@/components/FloatingBot";
 import InfoCards from "@/components/InfoCards";
+import HeroVideo from "@/components/HeroVideo";
 
 const cards = [
   {
@@ -30,14 +31,7 @@ export default function Home() {
       <WelcomeVideoModal />
 
       <div className="relative aspect-[4/3] w-full sm:aspect-[16/7] lg:aspect-[2000/707]">
-        <video
-          src="/assets/hero-video.mp4"
-          autoPlay
-          loop
-          muted
-          playsInline
-          className="absolute inset-0 h-full w-full object-cover object-center"
-        />
+        <HeroVideo />
       </div>
 
       <main className="mx-auto w-full max-w-4xl flex-1 px-4 py-12 sm:px-6 sm:py-16">
@@ -65,7 +59,7 @@ export default function Home() {
           alt="Instituto Superior de Formación Docente San José Laboulaye"
           width={444}
           height={450}
-          className="h-auto w-16"
+          className="h-auto w-16 lg:w-28"
         />
         VocaBot · Proyecto de orientación vocacional — 5° Año, Instituto San José, Laboulaye · 2026
       </footer>
