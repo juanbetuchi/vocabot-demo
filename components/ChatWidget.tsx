@@ -135,6 +135,25 @@ export default function ChatWidget({ variant = "widget", onClose }: ChatWidgetPr
       <div className="flex flex-wrap gap-2 border-t border-slate-200 bg-white p-3">
         {options.map((opt) => {
           const isNav = opt.label.startsWith("⬅") || opt.label.startsWith("🏠");
+
+          if (opt.image) {
+            return (
+              <button
+                key={opt.label}
+                onClick={() => goTo(opt.goto, opt.label)}
+                className="overflow-hidden rounded-lg transition hover:-translate-y-0.5 hover:opacity-90"
+              >
+                <Image
+                  src={`/assets/${opt.image}`}
+                  alt={opt.label}
+                  width={opt.imageWidth || 200}
+                  height={opt.imageHeight || 80}
+                  className="block h-9 w-auto"
+                />
+              </button>
+            );
+          }
+
           return (
             <button
               key={opt.label}

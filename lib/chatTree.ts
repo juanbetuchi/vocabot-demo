@@ -4,6 +4,9 @@
 export type ChatOption = {
   label: string;
   goto: string;
+  image?: string;
+  imageWidth?: number;
+  imageHeight?: number;
 };
 
 export type ChatImage = {
@@ -52,7 +55,13 @@ export const CHAT_TREE: Record<string, ChatNode> = {
       "¡Hola! Soy VocaBot 👋\nUn chatbot de orientación basado en menús, creado por estudiantes del Instituto San José para ayudarte a pensar tu futuro académico, laboral y personal.\n\n¿Sobre qué te gustaría hablar?",
     crumb: ["Inicio"],
     options: [
-      { label: "1. Sobre VocaBot", goto: "sobre_vocabot" },
+      {
+        label: "1. Sobre VocaBot",
+        goto: "sobre_vocabot",
+        image: "btn-sobre-vocabot.png",
+        imageWidth: 267,
+        imageHeight: 113,
+      },
       { label: "2. Conocerse", goto: "conocerse" },
       { label: "3. Informarse", goto: "informarse" },
       { label: "4. Decidirse", goto: "decidirse" },
