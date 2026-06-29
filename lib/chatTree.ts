@@ -256,7 +256,7 @@ export const CHAT_TREE: Record<string, ChatNode> = {
   },
   iv_objetivos: {
     message:
-      "Objetivo general:\nAnalizar la relación entre el uso de la IA y los proyectos de vida de los/as jóvenes que cursan el último año de la escuela secundaria.\n\nObjetivos específicos:\n• Identificar los proyectos vocacionales de los/as jóvenes en Laboulaye.\n• Reconocer los factores que influyen en su elección.\n• Explorar las influencias de la IA al momento de decidir.\n• Comprender los motivos que impulsan el uso de aplicaciones de IA.",
+      "General\nAnalizar la relación entre el uso de la IA con los proyectos de vida de los y las jóvenes que cursan el último año de la escuela secundaria.\n\nEspecíficos\n• Identificar los proyectos vocacionales de los y las jóvenes que cursan el último año de la escuela secundaria en Laboulaye.\n• Reconocer los factores que influyen en la elección de los/as jóvenes logrando explorar qué motivaciones y limitaciones tienen.\n• Explorar sobre las influencias de la IA a la hora de elegir y tomar decisiones vocacionales.\n• Comprender los motivos que impulsan la utilización de aplicaciones de IA.",
     crumb: ["Inicio", "Investigación", "Objetivos"],
     options: [
       { label: "⬅ Volver", goto: "investigacion" },
@@ -265,7 +265,7 @@ export const CHAT_TREE: Record<string, ChatNode> = {
   },
   iv_metodologia: {
     message:
-      "Enfoque metodológico mixto, articulando procedimientos cuantitativos y cualitativos. El estudio se inscribe en el paradigma sociocrítico y asume características de la investigación-acción.\n\nLa recolección de datos se realizó mediante encuestas (Formularios de Google) y entrevistas en profundidad a profesionales de la ciudad.",
+      "Enfoque metodológico mixto, articulando procedimientos cuantitativos y cualitativos. El estudio se inscribe en el paradigma sociocrítico y asume características de la investigación-acción.\n\nLa recolección de datos se realizó mediante dos procedimientos: la encuesta a través de Formularios de Google y entrevistas en profundidad a profesionales de nuestra ciudad.",
     crumb: ["Inicio", "Investigación", "Metodología"],
     options: [
       { label: "⬅ Volver", goto: "investigacion" },
